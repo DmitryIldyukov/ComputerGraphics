@@ -5,38 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab1"
         mc:Ignorable="d"
-        Title="Window" Height="450" Width="800">
-    <Grid>
-        <Grid x:Name="Surname">
-            <Rectangle Height="68" Width="10" Fill="Blue" Margin="282,185,508,179">
+        Title="fio" Height="450" Width="600">
+    <Grid Name="Container">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" x:Name="FirstName">
+            <Rectangle x:Name="NameA" Width="10" Height="100" Canvas.Left="71" Canvas.Top="165" Fill="Red" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Rectangle x:Name="NameB" Width="10" Height="110" Canvas.Left="130" Canvas.Top="165" Fill="Red" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Rectangle.RenderTransform>
-                    <RotateTransform Angle="35"/>
+                    <RotateTransform Angle="31"/>
                 </Rectangle.RenderTransform>
             </Rectangle>
-            <Rectangle Height="60" Width="10" Fill="Blue" Margin="241,187,549,187"/>
-            <Rectangle Height="60" Width="10" Fill="Blue" Margin="280,187,510,187"/>
-        </Grid>
-        <Grid x:Name="Name">
-            <Rectangle Height="68" Width="10" Fill="Green" Margin="340,185,450,181">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <RotateTransform Angle="22"/>
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
-            <Rectangle Height="68" Width="10" Fill="Green" Margin="340,189,450,177">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <RotateTransform Angle="-22"/>
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
-            <Rectangle Height="10" Width="80" Fill="Green" Margin="305,242,415,182"/>
-        </Grid>
-        <Grid x:Name="Patronymic">
-            <Rectangle Height="68" Width="10" Fill="Red"/>
-            <Rectangle Height="10" Width="20" Fill="Red" Margin="397,212,383,212"/>
-            <Ellipse Margin="417,183,349,183" Stroke="Red" StrokeThickness="10"/>
-        </Grid>
+            <Rectangle x:Name="NameC" Width="10" Height="100" Canvas.Left="130" Canvas.Top="165" Fill="Red" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Canvas>
+        <Canvas Grid.Column="1" x:Name="Surname">
+            <Rectangle x:Name="SurnameA" Width="10" Height="90" Canvas.Left="110" Canvas.Top="165" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Rectangle x:Name="SurnameB" Width="10" Height="90" Canvas.Left="80" Canvas.Top="165" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Rectangle x:Name="SurnameC" Width="70" Height="10" Canvas.Left="65" Canvas.Top="255" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Rectangle x:Name="SurnameD" Width="40" Height="10" Canvas.Left="80" Canvas.Top="165" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Canvas>
+        <Canvas Grid.Column="2" x:Name="Patronymic">
+            <Rectangle x:Name="PatronymicA" Width="10" Height="100" Canvas.Left="70" Canvas.Top="165" Fill="Blue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Rectangle x:Name="PatronymicB" Width="20" Height="10" Canvas.Left="70" Canvas.Top="210" Fill="Blue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Ellipse Canvas.Left="89" Canvas.Top="164" Stroke="Blue" StrokeThickness="10" Width="40" Height="102" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Canvas>
     </Grid>
 </Window>
