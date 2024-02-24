@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Lab1
+namespace JumpingLetters
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml
