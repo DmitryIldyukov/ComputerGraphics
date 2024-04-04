@@ -30,9 +30,11 @@ public partial class MainWindow : Window
 
     private void UploadImage_OnClick(object sender, RoutedEventArgs e)
     {
-        OpenFileDialog dlg = new OpenFileDialog();
-        dlg.DefaultExt = ".png";
-        dlg.Filter = "Image files (*.png;*.jpg;*.bmp)|*.png;*.jpg;*.bmp";
+        OpenFileDialog dlg = new OpenFileDialog
+        {
+            DefaultExt = ".png",
+            Filter = "Image files (*.png;*.jpg;*.bmp)|*.png;*.jpg;*.bmp"
+        };
         
         if (dlg.ShowDialog() == true)
         {
