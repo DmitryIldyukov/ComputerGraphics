@@ -70,12 +70,10 @@ public partial class MainWindow : Window
 
     private void Picture_MouseMove(object sender, MouseEventArgs e)
     {
-        if (_isDragging)
-        {
-            Point currentPosition = e.GetPosition(Container);
-            var transform = new TranslateTransform(currentPosition.X - _offset.X, currentPosition.Y - _offset.Y);
-            ImageGrid.RenderTransform = transform;
-        }
+        if (!_isDragging) return;
+        var currentPosition = e.GetPosition(Container);
+        var transform = new TranslateTransform(currentPosition.X - _offset.X, currentPosition.Y - _offset.Y);
+        ImageGrid.RenderTransform = transform;
     }
 
     private void Picture_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
