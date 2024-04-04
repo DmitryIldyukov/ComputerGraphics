@@ -15,7 +15,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Canvas Grid.Column="0" x:Name="FirstName">
+        <Canvas Grid.Column="0" x:Name="FirstName" MouseDown="LetterJumpAnimation">
             <Rectangle x:Name="NameA" Width="10" Height="100" Canvas.Left="71" Canvas.Top="165" Fill="Red" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle x:Name="NameB" Width="10" Height="110" Canvas.Left="130" Canvas.Top="165" Fill="Red" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Rectangle.RenderTransform>
@@ -24,13 +24,13 @@
             </Rectangle>
             <Rectangle x:Name="NameC" Width="10" Height="100" Canvas.Left="130" Canvas.Top="165" Fill="Red" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Canvas>
-        <Canvas Grid.Column="1" x:Name="Surname">
+        <Canvas Grid.Column="1" x:Name="Surname" MouseDown="LetterJumpAnimation">
             <Rectangle x:Name="SurnameA" Width="10" Height="90" Canvas.Left="110" Canvas.Top="165" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle x:Name="SurnameB" Width="10" Height="90" Canvas.Left="80" Canvas.Top="165" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle x:Name="SurnameC" Width="70" Height="10" Canvas.Left="65" Canvas.Top="255" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle x:Name="SurnameD" Width="40" Height="10" Canvas.Left="80" Canvas.Top="165" Fill="Green" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Canvas>
-        <Canvas Grid.Column="2" x:Name="Patronymic">
+        <Canvas Grid.Column="2" x:Name="Patronymic" MouseDown="LetterJumpAnimation">
             <Rectangle x:Name="PatronymicA" Width="10" Height="100" Canvas.Left="70" Canvas.Top="165" Fill="Blue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Rectangle x:Name="PatronymicB" Width="20" Height="10" Canvas.Left="70" Canvas.Top="210" Fill="Blue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Ellipse Canvas.Left="89" Canvas.Top="164" Stroke="Blue" StrokeThickness="10" Width="40" Height="102" HorizontalAlignment="Center" VerticalAlignment="Center"/>

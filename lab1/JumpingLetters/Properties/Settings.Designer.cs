@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab1.Properties
+namespace JumpingLetters.Properties
 {
 
 
