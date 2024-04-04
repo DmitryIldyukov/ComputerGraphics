@@ -32,7 +32,7 @@ public partial class MainWindow : Window
     {
         OpenFileDialog dlg = new OpenFileDialog();
         dlg.DefaultExt = ".png";
-        dlg.Filter = "Image files (*.png;*.jpeg;*.bmp)|*.png;*.jpeg;*.bmp";
+        dlg.Filter = "Image files (*.png;*.jpg;*.bmp)|*.png;*.jpg;*.bmp";
         
         if (dlg.ShowDialog() == true)
         {
