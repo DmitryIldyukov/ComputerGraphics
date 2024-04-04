@@ -47,6 +47,10 @@ public partial class MainWindow : Window
                     };
                     ImageGrid.Background = imageBrush;
                 }
+                else
+                {
+                    ImageGrid.Background = Brushes.Transparent;
+                }
                 Picture.Source = img;
             }
             catch (Exception ex)
