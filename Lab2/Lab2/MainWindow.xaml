@@ -8,8 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Menu>
-            <MenuItem Header="_File">
-                <MenuItem Header="_Open" Click="UploadImage_OnClick"/>
+            <MenuItem Header="File">
+                <MenuItem Header="Open" Click="UploadImage_OnClick"/>
             </MenuItem>
         </Menu>
         
