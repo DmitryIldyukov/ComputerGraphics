@@ -1,16 +1,8 @@
-﻿using System.IO;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Microsoft.Win32;
-using System.Windows.Navigation;
 using Path = System.IO.Path;
 
 namespace Lab2;
@@ -33,33 +25,25 @@ public partial class MainWindow : Window
         OpenFileDialog dlg = new OpenFileDialog
         {
             DefaultExt = ".png",
-            Filter = "Image files (*.png;*.jpg;*.bmp)|*.png;*.jpg;*.bmp"
+            Filter = "Image files(*.png;*.jpg;*.bmp)|*.png;*.jpg;*.bmp"
         };
         
         if (dlg.ShowDialog() == true)
         {
-            try
+            BitmapImage img = new BitmapImage(new Uri(dlg.FileName));
+            if (Path.GetExtension(dlg.FileName).ToLower() == ".png")
             {
-                BitmapImage img = new BitmapImage(new Uri(dlg.FileName));
-                if (Path.GetExtension(dlg.FileName).ToLower() == ".png")
+                ImageBrush imageBrush = new ImageBrush
                 {
-                    ImageBrush imageBrush = new ImageBrush
-                    {
-                        ImageSource = new BitmapImage(new Uri("background.png", UriKind.Relative))
-                    };
-                    ImageGrid.Background = imageBrush;
-                }
-                else
-                {
-                    ImageGrid.Background = Brushes.Transparent;
-                }
-                Picture.Source = img;
+                    ImageSource = new BitmapImage(new Uri("background.png", UriKind.Relative))
+                };
+                ImageGrid.Background = imageBrush;
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"Произошла ошибка загрузки изображения: {ex.Message}");
-                throw;
+                ImageGrid.Background = Brushes.Transparent;
             }
+            Picture.Source = img;
         }
     }
     
